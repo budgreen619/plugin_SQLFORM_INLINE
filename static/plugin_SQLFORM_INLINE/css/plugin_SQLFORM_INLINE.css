@@ -1,0 +1,36 @@
+.web2py_inline_form table {
+    margin-left: -6px; 
+}
+
+.web2py_inline_form {
+    margin:-20px 0px 20px;
+}
+
+.web2py_inline_form tr {
+    height:20px;
+}
+
+.edit-cell, .edit-buttons {
+    position:relative;
+}
+
+.edit-cell input, .edit-cell select, .edit-cell span, .edit-cell option {
+    position: absolute;
+    width: inherit;
+    padding: 4px 2px;
+}
+
+.edit-cell input[type="checkbox"] {
+    display: table-cell;
+    width: auto;
+    margin-top: 8px;
+}
+
+.edit-buttons .submit {
+    height: 20px;
+}
+
+.edit-buttons div {
+    position: absolute;
+    width: inherit;
+}
