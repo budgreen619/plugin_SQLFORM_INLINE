@@ -7,8 +7,6 @@ def inline_row(form, fields):
         """1 row table"""
         table=TABLE(_class='web2py_editable_table')
         row=TR()
-        for field in fields:
-          print field
         for id, label, controls, help in fields: 
             _controls = TD(controls, _class='edit-cell', _display='table-cell', _nowrap='nowrap')
             row.append(_controls)
@@ -453,7 +451,6 @@ class SQLFORM_INLINE(SQLFORM):
                 response.flash = T('There are errors in your form')
                 return LOAD(url=url(), target=formname)
             response.js = script
-            print response.js
             details = create_form.elements('td')
 
             if showid:
@@ -504,7 +501,6 @@ class SQLFORM_INLINE(SQLFORM):
                     #if it's an ajax request and we don't need to reload the
                     #entire page, let's just inform that there have been no
                     #exceptions and don't regenerate the grid
-                    print 'load'
                     return LOAD(url=url(), target=formname)
                 else:
                     #if it's requested that the grid gets reloaded on delete
