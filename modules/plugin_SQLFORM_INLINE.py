@@ -338,8 +338,6 @@ class SQLFORM_INLINE(SQLFORM):
                                 for(j=0;j<jQuery(this)[0].rows[0].cells.length;j++) {
                                     var cell = jQuery(jQuery(this)[0].rows[0].cells[j]);
                                     cell_widths[j]=cell.width();
-                                    console.log(cell.width() + ' ' + cell.innerWidth() + ' ' + cell.outerWidth());
-                                };
                             });
                             jQuery(edit_table).each(function() {
                                 for(j=0;j<jQuery(this)[0].rows[0].cells.length;j++) {
@@ -347,7 +345,6 @@ class SQLFORM_INLINE(SQLFORM):
                                 };
                             });  
                         }
-                        console.log('test');
                         resize_table();
                         $(window).on('resize', function() {
                             resize_table();
